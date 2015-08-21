@@ -1,4 +1,4 @@
-git-at-pomona.github.io !["status"](https://travis-ci.org/PomonaCS051/PomonaCS051.github.io.svg)
+pomonaCS051.github.io !["status"](https://travis-ci.org/PomonaCS051/PomonaCS051.github.io.svg)
 ========
 
 ## About

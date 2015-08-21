@@ -7,7 +7,7 @@ import os
 
 students = open('./all_students.txt', 'r')
 studentName = students.readline()
-request = 'git clone git@github.com:pomona-cs051/'
+request = 'git clone git@github.com:pomonacs051/'
 
 # easily modified to use HTTPS
 while studentName is not None:

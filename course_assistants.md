@@ -12,7 +12,7 @@ permalink: /taguide/
 > [Eric Campbell](mailto:eric.campbell@pomona.edu).
 
 > Note: If anything in these instructions is unclear or inaccurate, please
-> [post an issue](https://github.com/git-at-pomona/git-at-pomona.github.io/issues?q=is%3Aopen+is%3Aissue), [submit a PR](https://github.com/git-at-pomona/git-at-pomona.github.io/pulls), or contact
+> [post an issue](https://github.com/pomonaCS051/pomonaCS051.github.io/issues?q=is%3Aopen+is%3Aissue), [submit a PR](https://github.com/pomonaCS051/pomonaCS051.github.io/pulls), or contact
 > [us](mailto:eric.campbell@pomona.edu;ross.wollman@pomona.edu)
 
 ## Configuring your GitHub Account
@@ -173,4 +173,4 @@ to grade someone's code, you can always tag another TA or Professor in an inline
 comment.
 
 > Note: It is currently undecided if/how Git will be incorporated into the
-> students' grades. If you have suggestions, please [join the discussion](https://github.com/git-at-pomona/git-at-pomona.github.io/issues?q=is%3Aopen+is%3Aissue).
+> students' grades. If you have suggestions, please [join the discussion](https://github.com/pomonaCS051/pomonaCS051.github.io/issues?q=is%3Aopen+is%3Aissue).

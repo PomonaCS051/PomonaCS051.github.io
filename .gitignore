@@ -1,0 +1,7 @@
+# ignores for Jekyll
+_site 
+.sass-cache
+
+# General Ignores
+*.log
+*.swp

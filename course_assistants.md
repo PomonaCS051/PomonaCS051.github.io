@@ -27,7 +27,7 @@ This method will ask for your GitHub username and password each time you access
 a remote repository (if you are on a Mac, you should be able to add these
 credentials to your keychain).
 
-t> This method requires no setup.  When you clone the repositories, simply copy the
+> This method requires no setup.  When you clone the repositories, simply copy the
 > HTTPS clone link in the right side-bar.
 
 ### Using `ssh` (recommended)
@@ -35,13 +35,13 @@ This method will require you to set up RSA keys on your computer and on GitHub
 to enable unqueried access to your repositories. If you already have ssh keys,
 skip step 1. If you have set up GitHub ssh access for your current machine, you
 may skip all the steps below.
-  1. Open your bash terminal and in your home directory type `ssh-keygen`
+1. Open your bash terminal and in your home directory type `ssh-keygen`
     followed by the return key (it is recommended to accept the default settings).
-  2. Login to GitHub, navigate [here](https://www.github.com/settings/ssh) and click on
+2. Login to GitHub, navigate [here](https://www.github.com/settings/ssh) and click on
     **Add SSH key**
-  3. Provide a name in the *title* field to identify your device and copy the
+3. Provide a name in the *title* field to identify your device and copy the
     entire contents of your `$HOME/.ssh/rsa_pub` file into the *Key* box
-  4. Push, pull, and clone freely.
+4. Push, pull, and clone freely.
 
 ## Setting up your grading environment
 
@@ -124,12 +124,12 @@ to grading that student's code.
 Once you have configured Eclipse to use EGit and TM, and cloned the repositories
 you wish to grade, you will need to make Eclipse aware of your repositories so
 you can import them into your workspace to test functionality.
-  1. Visit **Import** *>* **Git** *>* **Projects from Git**
-    + If you are given the option to select "Existing local repository", do so
-  2. Since you have already cloned the repositories, click **Add...**
-  3. In the `Directory` box, type the absolute path to your grading directory and
+1. Visit **Import** *>* **Git** *>* **Projects from Git**
+  + If you are given the option to select "Existing local repository", do so
+2. Since you have already cloned the repositories, click **Add...**
+3. In the `Directory` box, type the absolute path to your grading directory and
     hit **Search**. Select each grading repository and hit **OK** or **Finish**.
-  4. In the Git Repositories Window `ctrl+click` on the remote respository you
+4. In the Git Repositories Window `ctrl+click` on the remote respository you
     wish to import and hit import. Follow the guide to import the project to your
     workspace
     > Note: you will need to import each repository into the workspace to test it.

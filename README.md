@@ -30,7 +30,7 @@ Finally, view the site at `http://localhost:4000`. As you make changes to the
 content of the site, jekyll will watch and attempt to rebuild. If you adjust
 the `_config.yml` file, you will have to rebuild with `jekyll serve`. 
 
-## Contributers
+## Contributors
 
 This project is currently maintained by [@rwoll](https://github.com/rwoll)
 and [@ericthewry](https://github.com/ericthewry).

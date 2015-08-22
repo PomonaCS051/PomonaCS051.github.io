@@ -11,20 +11,20 @@ permalink: /studentguide/
 
 The goal of implementing Git and GitHub in the CS051 lab workflow is to
 optimize the distribution-submission-feedback cycle for assignments while
-exposing students to industry standard tools. It will (hopefully) make it
-easier for course assistants and professors to provide feedback to students
-on their coding assignments by creating a simpler, more transparent workflow.
+exposing students to industry standard tools. It will make it easier for 
+course assistants and professors to provide feedback to students by creating 
+a simpler, more transparent workflow.
 
-Git is used extensievly throughout the open source and professional
+Git is used extensively throughout the open source and professional
 development communites, so learning about these invaluable tools will add to
-the set of skills with which you have to work to become a more effective
-developer. ***However, CS051's focus is on Object-Oriented Programming (OOP)
-and design--not on Git; therefore, we will not be covering advanced Git topics
-nor will we require you to know them.*** In some cases, we have wrapped
-multi-Git steps with simpler aliases; as you read the guide, be sure to check
-out the explanations, so you can better understand what is happening behind the
-scenes. Also, be sure to checkout the [list of Git resources](#resources-and-further-reading)
-we have compiled.
+the set of skills that make you a more effective programmer. ***However, 
+CS051's focus is on Object-Oriented Programming (OOP) and design--not on Git; 
+therefore, we will not be covering advanced Git topics nor will we require 
+you to know them.*** In some cases, we have wrapped complicated Git manoeuvres
+with simpler aliases, so as you read the guide, be sure to check out the 
+explanations to get a better sense of what is going on behind the scense. 
+Also, be sure to checkout the 
+[list of Git resources](#resources-and-further-reading) we have compiled.
 
 We appreciate your interest and willingness to help test this new workflow!
 At any point during the semester, **please ask questions as they arise**
@@ -78,15 +78,15 @@ your Git repository that you *clone* to your computer, you will configure
 *remotes* that point to the address of the GitHub hosted repository so that your
 repository can pull in updates from the online repos or push updates to them.
 
-> It's important to note that you will have a *local* repository that is
-> stored on your computer and another that is hosted online through GitHub.
-> While you will tell the repositories to interact, they don't automatically
-> stay synced and can vary from eachother. There will be one online repository
-> that all students will pull in starter code from and another where you will
-> be pushing and pulling your own work. (More on this later!)
+It's important to note that you will have a *local* repository that is
+stored on your computer and another that is hosted online through GitHub.
+While you will tell the repositories to interact, they don't automatically
+stay synced and can vary from eachother. There will be one online repository
+that all students will pull in starter code from and another where you will
+be pushing and pulling your own work. (More on this later!)
 
 In addition to supporting many features of Git, GitHub has added extra online
-features like issue tracking, inline code commenting, and Pull Requests (PR)
+features like issue tracking, inline code commenting, and Pull Requests (PRs)
 that we will be using throughout the semester.
 
 ### EGit
@@ -180,7 +180,7 @@ At this point, Eclipse should look like [this](/images/env_preview.png).
 6. Click the `Terminal` icon
    !["terminal"](/images/terminal.png) in the top menu bar.
 7. Type `cd` plus a space and paste the path you copied from step 5. It should
-   look something like this: `$ cd /Users/cecilsagehen/git/fa2105`  
+   look something like this: `cd /Users/cecilsagehen/git/fa2105`  
    Hit return.    
    Then copy and paste the following: `python configure_git.py`   
    Hit return.  
@@ -236,7 +236,7 @@ For this course, we will consider each new lab a feature, so the first time you
 go to work on a particular lab, you will want to create a new branch by
 executing the following command: 
 {% highlight bash %}
-$ git newLab labXX # labXX should be the actual lab number. i.e. lab01 or lab47
+git newLab labXX # labXX should be the actual lab number. i.e. lab01 or lab47
 {% endhighlight %}
 
 This will create a new branch and `checkout` the branch.
@@ -287,7 +287,7 @@ Until you do this step, all your work is being completed locally and is not
 being synced up to GitHub. To push it to GitHub, execute the following command 
 after [`cd`ing to the appropriate directory](#getting-around-with-the-command-line).:  
 {% highlight bash %}
-git submit
+git submit labXX # swap out `labXX` with the appropriate number
 {% endhighlight %}
 
 #### 5. Initiate a Pull Request for Grading
@@ -299,13 +299,14 @@ git submit
 5. Ensure base is set to master and compare is set to labXX.
 6. Click ***Create new pull request*** to finish.
 
-> If you did any extra credit, please tell the TA by explaining the extra cedit
-> you completed in the comment of the Pull Request.
->
-> If it is before the lab deadline and you want to edit your code, simply
-> work on it in Eclipse and use `git submit labXX`. The new commits will
-> automatically appear in the Pull Request as long as you are committing
-> to the same branch.
+If you did any extra credit, please tell the TA by explaining the extra cedit
+you completed in the comment of the Pull Request.
+
+If it is before the lab deadline and you want to edit your code, simply
+work on it in Eclipse and use `git submit labXX`. The new commits will
+automatically appear in the Pull Request as long as you are committing
+to the same branch. ***Commits submitted after the deadline will not be 
+graded!***
 
 ## Reviewing TA and Professor Feedback
 
@@ -325,12 +326,12 @@ code repository depending on the nature of the question or concern.
 
 ## Quick Reference
 
-### Terminal
+### Terminal Navigation
 {% highlight bash %}
-$ cd /path/to/folder # makes current directory /path/to/folder
-$ pwd # prints the path of the working directory
-
+cd /path/to/folder # makes current directory /path/to/folder
+pwd # prints the path of the working directory
 {% endhighlight %}
+
 ### Git
 {% highlight bash %}
 $ git status # get details of your git repo - modified files, current branch, etc.

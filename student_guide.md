@@ -20,10 +20,10 @@ development communites, so learning about these invaluable tools will add to
 the set of skills that make you a more effective programmer. ***However, 
 CS051's focus is on Object-Oriented Programming (OOP) and design--not on Git; 
 therefore, we will not be covering advanced Git topics nor will we require 
-you to know them.*** In some cases, we have wrapped complicated Git manoeuvres
+you to know them.*** In some cases, we have wrapped complicated Git maneuvers
 with simpler aliases, so as you read the guide, be sure to check out the 
 explanations to get a better sense of what is going on behind the scense. 
-Also, be sure to checkout the 
+Also, be sure to checkout the
 [list of Git resources](#resources-and-further-reading) we have compiled.
 
 We appreciate your interest and willingness to help test this new workflow!
@@ -344,4 +344,3 @@ $ git add -A # stages all modified files for next commit
 {% endhighlight %}
 
 ## Resources and Further Reading
-

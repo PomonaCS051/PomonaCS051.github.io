@@ -17,7 +17,7 @@ mobile apps, from Adobe Illustrator projects, to Eclipse projects.
 
 One of the greatest assets about using Git for your projects is that it is almost
 impossible to do anything irreversible. This is because of the way that Git
-tracks changes, generally it adds changes to maintain the current state of your
+tracks changes. Generally, it adds changes to maintain the current state of your
 file system, so if I add a line of code at one point, and then remove it at a
 later date, Git will know both that I added that line *and* that I deleted it.
 This means that if you royally screw up a piece of code, it is really easy to
@@ -49,7 +49,7 @@ this for all of the tracked files, run `git add -A` or `git add --all` from the
 command line.  To stage changes for a specific file, run `git add <filename>`.
 
 Sometimes you want to remove a file from the staging index.  To do this you have
-to reset the file to its state at the current HEAD, by running
+to reset the file to its state at the current `HEAD`, by running
 `git checkout <branchname> <filename>`.
 
 > Protip: If you want to add all the files in directory `test_dir`, instead of

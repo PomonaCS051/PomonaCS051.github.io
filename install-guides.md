@@ -55,6 +55,9 @@ permalink: /installguides/
 
 ## Git
 
+If you're on the Pomona CS lab computers, open a Terminal window and type
+`git`, and then press enter. Git will automatically install if it is not found.
+
 Head over to the official Git website to find the proper download and
 instructions for your OS: [Official Git Site](https://git-scm.com/downloads).
 

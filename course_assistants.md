@@ -46,6 +46,7 @@ may skip all the steps below.
 ## Setting up your grading environment
 
 ### Configuring Eclipse
+
 #### Install the Latest Distribution (recommended)
 Visit [this link](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/marsr)
 to view and download the appropriate distro of Eclipse Mars.

@@ -198,14 +198,18 @@ In order to navigate into a directory, you will use the current directory
 {% highlight bash %}
 cd path/to/folder # swap out 'path/to/folder' with the actual path!
 {% endhighlight %}
+
 When you are working with Git commands, you will want to `cd` into the
-directory that is one level above the `.git` directory.
+working directory. (It is one level above the `.git` directory.) 
 
 1. In the Git Repositories view in Eclipse, click the arrow next to your
    repository.
 2. Then, `ctrl`-click on *Working Directory* and click *Copy Path to Clipboard*.
 3. In terminal type `cd` plus a space and paste the path you copied in the above
-   step. Then hit return and you will be in the proper directory.
+   step. Then hit return and you will be in the proper directory. **At the
+   start of each lab session, we recommend you naviget to thr proper directory
+   and leave the tab open so you don't have to continuously repeating this
+   section.**
 
 > Hint: If you need to figure out where you are in your filesystem, you can
 > type `pwd` which stands for "print working directory."
@@ -225,6 +229,9 @@ branch. To do that, complete the following steps:
    explorer where you will edit and write code. When you go through the import,
    you can leave the default values.
 
+> `starterCode` is an alias that switches you to the `master` branch and pulls
+> in new commits from the starter-code remote repository.
+
 ### Working on Assignments
 
 After you completed the [above step](#getting-new-assignments) and you see the
@@ -241,18 +248,21 @@ git newLab labXX # labXX should be the actual lab number. i.e. lab01 or lab47
 
 This will create a new branch and `checkout` the branch.
 
-> If you are returning to work on an assignment that you have already started,
-> you can `checkout` its branch by using `git checkout labXX`. (Just remember
-> to change `XX` to the appropiate number!) This will put the relevent files
-> and changes back into your working directory.
+> **If you are returning to work on an assignment that you have already 
+> started,** you must `checkout` its branch by using `git checkout labXX`.
+> (Just remember to change `XX` to the appropiate number!)
+> This will put the relevent files and changes back into your working directory
+> and subsequently into the Package Explorer.
 
 #### 2. Create and Submit a Design
 
 1. Open the files you want to change in Eclipse through it's standard Package
    Explorer and make your changes.
-2. Commit your work through the EGit GUI. (TODO: Add explanation and specific
-   steps).
+2. Commit your work through the EGit GUI. (See below for detailed instructions
+   for commiting.)
 3. Now, you'll need to `push` the changes you made locally to GitHub.
+
+> Remember to `cd` into your working directory if you haven't already done so!
 
 {% highlight bash %}
 git submit labXX # swap out 'labXX' with the appropriate number
@@ -270,9 +280,10 @@ at a certain step, follow the below instructions to do so:
    **Commit...**.
 4. In the dialog box that appears add a commit message.
    
-   > Commit messages should be short and to the point.
+   > Commit messages should be short and to the point. Something like "fixed
+   > OnMouseDrag() method" or "implemented color changing methods".
 
-5. On the bottom of the window, you will see a list of the modified files in
+5. On the bottom of the window, you will see a list of the modified files
    present in your workspace. If you would like a changes of a file to be
    captured in the commit, use the checkbox to select the appropriate files.
    In Git, this is called staging files for a commit.
@@ -299,14 +310,14 @@ git submit labXX # swap out `labXX` with the appropriate number
 5. Ensure base is set to master and compare is set to labXX.
 6. Click ***Create new pull request*** to finish.
 
-If you did any extra credit, please tell the TA by explaining the extra cedit
-you completed in the comment of the Pull Request.
+***If you did any extra credit, please tell the TA by explaining the extra cedit
+you completed in the comment of the Pull Request.***
 
 If it is before the lab deadline and you want to edit your code, simply
 work on it in Eclipse and use `git submit labXX`. The new commits will
 automatically appear in the Pull Request as long as you are committing
-to the same branch. ***Commits submitted after the deadline will not be 
-graded!***
+to the same branch (in this case that branch is labXX).
+***Commits submitted after the deadline will not be graded!***
 
 ## Reviewing TA and Professor Feedback
 

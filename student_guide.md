@@ -20,11 +20,7 @@ development communites, so learning about these invaluable tools will add to
 the set of skills that make you a more effective programmer. ***However, 
 CS051's focus is on Object-Oriented Programming (OOP) and design--not on Git; 
 therefore, we will not be covering advanced Git topics nor will we require 
-you to know them.*** In some cases, we have wrapped complicated Git maneuvers
-with simpler aliases, so as you read the guide, be sure to check out the 
-explanations to get a better sense of what is going on behind the scense. 
-Also, be sure to checkout the
-[list of Git resources](#resources-and-further-reading) we have compiled.
+you to know them.***
 
 We appreciate your interest and willingness to help test this new workflow!
 At any point during the semester, **please ask questions as they arise**
@@ -93,25 +89,12 @@ that we will be using throughout the semester.
 
 EGit is an implementation of Git in the Eclipse IDE; it supports the way the
 IDE sets up projects and stores the files on your computer. This plug-in also
-includes a graphical user interface (GUI) to complete common Git commands
-without having to use the command line (although we will be using a bit of
-the command line this semester).
-
-### Terminal
-
-A terminal is a way to interact with a computer by giving it text commands. The
-commands can include everything from making a directory (`mkdir myDirectory`)
-to removing a file (`rm myFile`) to running a console application like `git`.
-
-In Eclipse, you will be using a Terminal Emulator that will allow you to
-execute basic system commands like navigating into a folder
-(`cd path/to/folder`) or running Git commands and aliases we created for this
-course all without leaving the IDE.
+includes a graphical user interface (GUI) to complete common Git commands.
 
 ## Getting Setup
 
-You should only need to complete the steps in this section once for the lab
-computers and once for your personal computer. They are instructions
+**You should only need to complete the steps in this section once for the lab
+computers and once for your personal computer.** They are instructions
 specifically for Mac OSX, so if you're running any other operating system,
 please contact us, and we will gladly help you get setup.
 
@@ -136,22 +119,20 @@ the links in them!***
 > This guide assumes you already have Eclipse with EGit installed.
 > If you need to install it, follow the [installation guide](/installguides).
 
+> If you are on the lab machines, skip steps 2, 3, and 4 here.
+
 1. Launch Eclipse by double clicking the icon.
 2. In the dialog box that appears, leave the default value and check the box
    in the lower left corner to have this set as the default. Then click OK.
 3. In the upper right corner of the new Eclipse window, click ***Workbench***.
 4. On the toolbar go to ***Window > Perspective > Open Perspective > Java***.
-5. Add the Terminal to the view by clicking !["terminal"](/images/terminal.png)
-   in the toolbar. Then click OK in the dialog box that appears.
-
-    > The terminal that appears will appear in the same tab as the java
-    > debugger that you will rely on throughout the semester, so be sure to
-    > close the terminal when you are not using it (or switch tabs)!
-
-6. Now, add the EGit plug-in to the workbench by clicking ***Window > Show
+5. Now, add the EGit plug-in to the workbench by clicking ***Window > Show
    View > Other... > Git > Git Repositories***.
+6. Add the Git menu to your toolbar by clicking ***Window > Customize Perspective...
+   > Command Groups Availability (tab)***. Check **Git** and **Git Navigation Actions**.
+   Click ok to finish
 
-At this point, Eclipse should look like [this](/images/env_preview.png).
+At this point, Eclipse should look like [this]().
 
 ### Configuring Git and Cloning the Starter Code Repository into Eclipse
 
@@ -167,52 +148,30 @@ At this point, Eclipse should look like [this](/images/env_preview.png).
       Store" and click **Next >**. 
    5. Ensure the `master` branch is selected. Then click **Next >**.
    6. In the next step, leave the default values and click **Next >**.
-   7. Select *Import existing Eclipse Projects*. Then click **Next >**.
-   8. Ensure the box next to Lab00 is checked. Then click **Finish**
-      
-      > Once it finishes, you should see the `LabXX` folders in Eclipse's
-      > Package Explorer.
+   7. Change the remote name to `starter-code`.
+      Check *Import existing Eclipse Projects*. Then click **Next >**.
+   8. Ensure the box next to HelloWorld (and any other labs) are checked.
+      Then click **Finish**
+2. Add a remote to point to your personal repository.
+   1. In the Git Repositories view, `ctrl`-click on your project and select
+      **Create Remote...**.
+   2. For remote name, type `submission` and click **Next >**.
+   3. Next to the URI box, click **Change...**.
+   4. Type in your personal URI of the repository we have added you to.
+      It should look something like
+      `https://github.com/PomonaCS051/cecil-sagehen_fa2015.git` (except cecil
+      and sagehen will be replaced with your name).
+   5. Under authentication, put your GitHub credentials.
+   6. Then click **Finish**.
+   7. Finally, click **Save and Push**.
 
-4. In the repositories view in the EGit window, expand the repository by
-   clicking the triangle next to its name. Then click **Working Directory** so
-   it is highlighted in blue.
-5. Hit `command-C` to copy the path of the folder.
-6. Click the `Terminal` icon
-   !["terminal"](/images/terminal.png) in the top menu bar.
-7. Type `cd` plus a space and paste the path you copied from step 5. It should
-   look something like this: `cd /Users/cecilsagehen/git/fa2105`  
-   Hit return.    
-   Then copy and paste the following: `python configure_git.py`   
-   Hit return.  
-   You will be prompted for your password. Enter the password for the **lab
-   computer** and hit return.  
-   Enter the remaining information as it prompts you to and hit return after
-   each prompt.
+   > If you get an error message, it may have been that you mistyped the URI or
+   > your username/password combination was wrong. Be sure to use your GitHub
+   > credentials and **not** the CS lab credentials.
+
+Once it finishes, you should see the `HelloWorld` folder in Eclipse's Package Explorer.
 
 ## Repeated Tasks Throughout the Semester
-
-### Getting Around with the Command Line
-
-In order to navigate into a directory, you will use the current directory
-(`cd`) command. It's most basic use looks something like this:  
-{% highlight bash %}
-cd path/to/folder # swap out 'path/to/folder' with the actual path!
-{% endhighlight %}
-
-When you are working with Git commands, you will want to `cd` into the
-working directory. (It is one level above the `.git` directory.) 
-
-1. In the Git Repositories view in Eclipse, click the arrow next to your
-   repository.
-2. Then, `ctrl`-click on *Working Directory* and click *Copy Path to Clipboard*.
-3. In terminal type `cd` plus a space and paste the path you copied in the above
-   step. Then hit return and you will be in the proper directory. **At the
-   start of each lab session, we recommend you naviget to thr proper directory
-   and leave the tab open so you don't have to continuously repeating this
-   section.**
-
-> Hint: If you need to figure out where you are in your filesystem, you can
-> type `pwd` which stands for "print working directory."
 
 ### Getting New Assignments
 
@@ -221,16 +180,18 @@ In order to get the starter code and outlines that are in this repository, you
 will have to `pull` from that remote to your local repository on the `master`
 branch. To do that, complete the following steps:  
 
-1. Open Terminal in Eclipse.
-2. [`cd` into the appropriate directory](#getting-around-with-the-command-line).
-3. Execute the following command: `git starterCode`
-4. Then, `ctrl`-click in the repository view and select **Import Projects...**
-5. Follow the steps to import the projects and they will appear in the Package
-   explorer where you will edit and write code. When you go through the import,
-   you can leave the default values.
+1. In the git repositories view, `ctrl`-click (or right click) on the `fa2015`
+   repository. Use the **Switch To** option and select master. The professors will
+   always push the start code to the master branch, so if you are on another branch
+   there will not be changes to pull in with the configuration of the repository.
+2. `ctrl`-click on the repository name again. This time it should read `fa2015 [master]`.
+   Then select **Pull** and all the latest changes will be fetched and merged into
+   your repository for you to begin working on. If the projects don't immediately
+   appear in the package explorer, `ctrl`-click on the repository name and follow
+   the default prompts under the **Import Projects...** menu.
 
-> `starterCode` is an alias that switches you to the `master` branch and pulls
-> in new commits from the starter-code remote repository.
+   > Note: Access the import wizard through the git repositories view. The import
+   > wizard that is used normally, will not handle the git data appropriately.
 
 ### Working on Assignments
 
@@ -240,19 +201,24 @@ code in Eclipse's Package Explorer, you'll want to follow the below workflow:
 #### 1. Branch
 
 For this course, we will consider each new lab a feature, so the first time you
-go to work on a particular lab, you will want to create a new branch by
-executing the following command: 
-{% highlight bash %}
-git newLab labXX # labXX should be the actual lab number. i.e. lab01 or lab47
-{% endhighlight %}
+go to work on a particular lab, you will want to create a new branch:
+
+1. `ctrl`-click on the `fa2015` repository in the Git Repositories view.
+2. Click **Switch To** > **New Branch...** and name the branch `labXX` where
+   `XX` is a two digit lab number (`{01, 02, 03,..., 10, 11}`).
+3. Now, in your Git Repositories view, your repository will read something like
+   `fa2015 [lab00] - /path/to/directory` with the bracketed information indicating
 
 This will create a new branch and `checkout` the branch.
 
 > **If you are returning to work on an assignment that you have already 
-> started,** you must `checkout` its branch by using `git checkout labXX`.
-> (Just remember to change `XX` to the appropiate number!)
-> This will put the relevent files and changes back into your working directory
-> and subsequently into the Package Explorer.
+> started,** you must `checkout` its branch by using switching to it. When you
+> checkout a branch or commit, git changes the files in your working directory
+> to match the specified snapshot. This means if you create branch `lab00` work on
+> it, then create a branch for `lab01` and work on a new assignment in it, then
+> checkout the older branch, `lab00`, it may appear as if your Lab 1 files disappeared.
+> Your code is not gone, git simply moved it out of your working directory since it
+> wasn't there during Lab 0. If you checkout Lab 1 again, git will put the code back.
 
 #### 2. Create and Submit a Design
 
@@ -262,12 +228,6 @@ This will create a new branch and `checkout` the branch.
    for commiting.)
 3. Now, you'll need to `push` the changes you made locally to GitHub.
 
-> Remember to `cd` into your working directory if you haven't already done so!
-
-{% highlight bash %}
-git submit labXX # swap out 'labXX' with the appropriate number
-{% endhighlight %}
-
 #### 3. Develop Your Code and Commit Your Work
 
 Continue working on your code in Eclipse as you would normally. When you
@@ -275,33 +235,34 @@ complete an incremental component or if the instructions tell you to `commit`
 at a certain step, follow the below instructions to do so:
 
 1. Save your work.
-2. In the Package Explorer, `ctrl`-click on the lab's folder.
-3. In the menu that appears (towards the bottom), click **Team...**, then click
+2. In the Package Explorer, ensure that you are on the correct branch as indicated
+   by the bracketed information next to the project name. (i.e. `Laundry-Lab [lab01]`
+   indicates you are on the `lab01` branch).
+3. `ctrl`-click on the lab's folder.
+4. In the menu that appears (towards the bottom), click **Team...**, then click
    **Commit...**.
 4. In the dialog box that appears add a commit message.
    
    > Commit messages should be short and to the point. Something like "fixed
-   > OnMouseDrag() method" or "implemented color changing methods".
+   > OnMouseDrag() method" or "implemented color changing methods" or "completed
+   > lab47 design".
 
 5. On the bottom of the window, you will see a list of the modified files
    present in your workspace. If you would like a changes of a file to be
    captured in the commit, use the checkbox to select the appropriate files.
-   In Git, this is called staging files for a commit.
-6. Click **Commit**.
+   In Git, this is called staging files for a commit. 
+6. Click **Commit and Push**. If it's the first time you are pushing a branch,
+   a dialog box will appear. Simply select the `submission` remote under the
+   **Configured remote repository**. This is how Git knows where to push your code
+   to.
 7. Repeat this sections steps to incrementally and strategically capture the
    progress of your work.
 
+> If you aren't connected to the internet, use **Commit** instead of **Commit
+> and Push**. Once you have an internet connection, you can push all the local
+> commits at once by `ctrl`-clicking on the project and selcting push.
 
-#### 4. Push Your Assignment to GitHub
-
-Until you do this step, all your work is being completed locally and is not
-being synced up to GitHub. To push it to GitHub, execute the following command 
-after [`cd`ing to the appropriate directory](#getting-around-with-the-command-line).:  
-{% highlight bash %}
-git submit labXX # swap out `labXX` with the appropriate number
-{% endhighlight %}
-
-#### 5. Initiate a Pull Request for Grading
+#### 4. Initiate a Pull Request for Grading
 
 1. Go to [GitHub](https://github.com).
 2. Navigate to your private repository.
@@ -334,24 +295,3 @@ the Issues tab. If it is a question about a comment from another TA or
 professor, respond directly to the comment by making another comment.
 If it is a general question, raise an issue in your repository or the starter
 code repository depending on the nature of the question or concern.
-
-## Quick Reference
-
-### Terminal Navigation
-{% highlight bash %}
-cd /path/to/folder # makes current directory /path/to/folder
-pwd # prints the path of the working directory
-{% endhighlight %}
-
-### Git
-{% highlight bash %}
-$ git status # get details of your git repo - modified files, current branch, etc.
-$ git starterCode  # fetches new assignments and merges them into `master` branch
-$ git newLab lab47 # creates a branch, `lab47` for you to work on
-$ git submit lab47 # pushes lab47 branch to your private GitHub repo
-$ git checkout a-branch-name # checks out `a-branch-name`
-$ git commit -m "my commit message" # creates a new commit with a message
-$ git add -A # stages all modified files for next commit
-{% endhighlight %}
-
-## Resources and Further Reading

@@ -11,15 +11,15 @@ permalink: /studentguide/
 
 The goal of implementing Git and GitHub in the CS051 lab workflow is to
 optimize the distribution-submission-feedback cycle for assignments while
-exposing students to industry standard tools. It will make it easier for 
-course assistants and professors to provide feedback to students by creating 
+exposing students to industry standard tools. It will make it easier for
+course assistants and professors to provide feedback to students by creating
 a simpler, more transparent workflow.
 
 Git is used extensively throughout the open source and professional
 development communites, so learning about these invaluable tools will add to
-the set of skills that make you a more effective programmer. ***However, 
-CS051's focus is on Object-Oriented Programming (OOP) and design--not on Git; 
-therefore, we will not be covering advanced Git topics nor will we require 
+the set of skills that make you a more effective programmer. ***However,
+CS051's focus is on Object-Oriented Programming (OOP) and design--not on Git;
+therefore, we will not be covering advanced Git topics nor will we require
 you to know them.***
 
 We appreciate your interest and willingness to help test this new workflow!
@@ -27,11 +27,11 @@ At any point during the semester, **please ask questions as they arise**
 about Git and GitHub. If the Git-related instructions make no sense, please
 let us know so we can clarify them for the future!
 
-[We would love to hear about your personal feedback and suggestions!](#feedback) 
+[We would love to hear about your personal feedback and suggestions!](#feedback)
 
 ## Tools You Will Be Using
 
-In order to make everything work together, we will be using several different 
+In order to make everything work together, we will be using several different
 tools and software throughout the semester. Here is a brief intro to
 each of the major tools you will be encountering:
 
@@ -132,7 +132,7 @@ the links in them!***
    > Command Groups Availability (tab)***. Check **Git** and **Git Navigation Actions**.
    Click ok to finish
 
-At this point, Eclipse should look like [this]().
+At this point, Eclipse should look like [this](/images/screenshots/student_guide.md).
 
 ### Configuring Git and Cloning the Starter Code Repository into Eclipse
 
@@ -141,11 +141,11 @@ At this point, Eclipse should look like [this]().
       *>* **Next** *>*
    2. Click on **Clone URI** and **Next >**.
    3. In the **Source Git Repository** dialog box that appears, copy and paste
-      the following into the *URI* box:  
+      the following into the *URI* box:
       `https://github.com/PomonaCS051/fa2015.git`
    4. Type in your GitHub username where it says "User" and your GitHub
       password where it says "Password". Check the box next to "Store in Secure
-      Store" and click **Next >**. 
+      Store" and click **Next >**.
    5. Ensure the `master` branch is selected. Then click **Next >**.
    6. In the next step, leave the default values and click **Next >**.
    7. Change the remote name to `starter-code`.
@@ -178,7 +178,7 @@ Once it finishes, you should see the `HelloWorld` folder in Eclipse's Package Ex
 Professors will be pushing new assignments to your `starter-code` remote.
 In order to get the starter code and outlines that are in this repository, you
 will have to `pull` from that remote to your local repository on the `master`
-branch. To do that, complete the following steps:  
+branch. To do that, complete the following steps:
 
 1. In the git repositories view, `ctrl`-click (or right click) on the `fa2015`
    repository. Use the **Switch To** option and select master. The professors will
@@ -211,7 +211,7 @@ go to work on a particular lab, you will want to create a new branch:
 
 This will create a new branch and `checkout` the branch.
 
-> **If you are returning to work on an assignment that you have already 
+> **If you are returning to work on an assignment that you have already
 > started,** you must `checkout` its branch by using switching to it. When you
 > checkout a branch or commit, git changes the files in your working directory
 > to match the specified snapshot. This means if you create branch `lab00` work on
@@ -242,7 +242,7 @@ at a certain step, follow the below instructions to do so:
 4. In the menu that appears (towards the bottom), click **Team...**, then click
    **Commit...**.
 4. In the dialog box that appears add a commit message.
-   
+
    > Commit messages should be short and to the point. Something like "fixed
    > OnMouseDrag() method" or "implemented color changing methods" or "completed
    > lab47 design".
@@ -250,7 +250,7 @@ at a certain step, follow the below instructions to do so:
 5. On the bottom of the window, you will see a list of the modified files
    present in your workspace. If you would like a changes of a file to be
    captured in the commit, use the checkbox to select the appropriate files.
-   In Git, this is called staging files for a commit. 
+   In Git, this is called staging files for a commit.
 6. Click **Commit and Push**. If it's the first time you are pushing a branch,
    a dialog box will appear. Simply select the `submission` remote under the
    **Configured remote repository**. This is how Git knows where to push your code

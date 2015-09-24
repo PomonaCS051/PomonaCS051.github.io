@@ -132,7 +132,7 @@ the links in them!***
    > Command Groups Availability (tab)***. Check **Git** and **Git Navigation Actions**.
    Click ok to finish
 
-At this point, Eclipse should look like [this](/images/screenshots/student_guide.md).
+At this point, Eclipse should look like [this](/images/screenshots/repo_view.png).
 
 ### Configuring Git and Cloning the Starter Code Repository into Eclipse
 
@@ -192,6 +192,16 @@ branch. To do that, complete the following steps:
 
    > Note: Access the import wizard through the git repositories view. The import
    > wizard that is used normally, will not handle the git data appropriately.
+
+3. If this does not work, you will need to **Fetch** and **Merge**. To do this,
+   checkout the master branch, click on the fetch icon. Once that task completes,
+   and then click on the Merge icon. A Dialog will pop up. Click the small arrow
+   next to Remote references on the dialog that pops up and click on
+   `starter-code/master`.  Click through the remainder of the dialog, accepting
+   defaults.
+
+   > Note: This *fetch and merge* strategy is in fact what git is doing under the
+   > hood when it performs a `pull`.
 
 ### Working on Assignments
 
